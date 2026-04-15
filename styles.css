@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    font-weight: 400;
+}
+
+.slide {
+    position: relative;
+    display: none;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.6s ease;
+}
+
+.slide.active {
+    display: flex;
+    animation: slideFade 0.7s ease;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    top: 0;
+    left: 0;
+}
+
+/* Background images */
+.slide-bg1 {
+    background: url('https://images.unsplash.com/photo-1509395176047-4a66953fd231') center/cover no-repeat;
+}
+
+.slide-bg2 {
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+}
+
+.slide-bg3 {
+    background: url('https://images.unsplash.com/photo-1497436072909-60f360e1d4b1') center/cover no-repeat;
+}
+
+.slide-bg4 {
+    background: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438') center/cover no-repeat;
+}
+
+.slide-bg5 {
+    background: url('https://images.unsplash.com/photo-1470115636492-6d2b56f9146d') center/cover no-repeat;
+}
+
+.slide-bg6 {
+    background: url('https://images.unsplash.com/photo-1534367610401-9f5ed68180aa') center/cover no-repeat;
+}
+
+.slide-bg7 {
+    background: url('https://images.unsplash.com/photo-1546614042-7df3c24c9e5d') center/cover no-repeat;
+}
+
+.slide-bg8 {
+    background: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19') center/cover no-repeat;
+}
+
+.slide-bg9 {
+    background: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7') center/cover no-repeat;
+}
+
+.slide-bg10 {
+    background: url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d') center/cover no-repeat;
+}
+
+.slide-bg11 {
+    background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa') center/cover no-repeat;
+}
+
+.slide-bg12 {
+    background: url('https://images.unsplash.com/photo-1418985991508-e47386d96a71') center/cover no-repeat;
+}
+
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.94);
+    padding: 40px 50px;
+    border-radius: 28px;
+    width: 70%;
+    max-width: 900px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    z-index: 2;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1a2a4f;
+    border-left: 5px solid #2c7da0;
+    padding-left: 20px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: #2c3e66;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #2d3748;
+}
+
+a {
+    color: #2c7da0;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #1a2a4f;
+    text-decoration: underline;
+}
+
+ul {
+    font-size: 20px;
+    line-height: 1.7;
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin: 12px 0;
+    padding-left: 10px;
+    color: #1e2a47;
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #4a5568;
+    text-align: center;
+    border-top: 1px solid #cbd5e0;
+    padding-top: 15px;
+}
+
+.nav {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(8px);
+    z-index: 10;
+}
+
+button {
+    padding: 10px 18px;
+    border-radius: 40px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.2s ease;
+    color: #1a2a4f;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #2c7da0;
+    color: white;
+}
+
+#slideCounter {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 12px;
+    border-radius: 30px;
+}
+
+/* Animações */
+@keyframes slideFade {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.reveal {
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .card {
+        width: 85%;
+        padding: 25px 30px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    ul {
+        font-size: 16px;
+    }
+
+    li {
+        font-size: 15px;
+    }
+}
